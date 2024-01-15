@@ -19,7 +19,7 @@
 </head>
 <body>
     <form runat="server" id="app">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary box-shadow">
             <div class="container-fluid">
                 <a class="navbar-brand text-white" href="#">Intranet</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -42,7 +42,7 @@
             </div>
         </nav>
         <div class="page-container">
-            <aside>
+            <aside class="d-none d-lg-block">
                 <asp:ContentPlaceHolder runat="server" ID="BarraLateral">
                 </asp:ContentPlaceHolder>
             </aside>
@@ -53,79 +53,6 @@
         </div>
     </form>
 
-    <script>
-        // var a = document.querySelector('main');
-        // console.log(a);
-        // a.style.height = a.offsetHeight;
-    </script>
-
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        :root{
-            
-        }
-
-        nav {
-            
-            background-color: skyblue;
-            padding: 1rem;
-            
-        }
-
-        .navbar-nav a{
-            color: white !important;
-        }
-
-       .nav-link{
-           color: white !important;
-           text-shadow: 1px 1px 2px gray;
-       }
-
-        main {
-            background-color: white;
-            height: 100%;
-            width: fit-content;
-            overflow: auto;
-            padding: .5rem;
-        }
-
-        .page-container {
-            background-color: blueviolet;
-            height: 100%;
-            display: flex;
-
-            overflow: hidden;
-        }
-
-        aside {
-            background-color: green;
-            width: fit-content;
-            padding: .5rem;
-            min-width: 200px;
-            width: max-content;
-            background-color:skyblue;            
-
-        }
-
-        ul {
-            display: flex;
-            flex-flow: column;
-            gap: .5rem;
-        }
-
-        #app {
-            display: flex;
-            background-color: brown;
-            flex-flow: column;
-            height: 100vh;
-            overflow: hidden;
-        }
-    </style>
     <script src="Scripts/bootstrap.js"></script>
 </body>
 </html>
