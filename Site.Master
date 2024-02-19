@@ -1,5 +1,8 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WebLayout.SiteMaster" %>
 
+<%@ Register Src="~/CustomComponent/WUCMenuAdministracao.ascx" TagPrefix="uc1" TagName="WUCMenuAdministracao" %>
+
+
 <!DOCTYPE html>
 
 <html lang="pt">
@@ -19,34 +22,40 @@
 </head>
 <body>
     <form runat="server" id="app">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary box-shadow">
-            <div class="container-fluid">
+
+        <nav class="navbar navbar-expand-md bg-body-tertiary box-shadow">
+            <div class="container">
                 <a class="navbar-brand text-white" href="#">Intranet</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-link active" href="#" aria-current="page"><i class="bi-people-fill" ></i>Cadastros</a>
-                        <a class="nav-link" href="#"><i class="bi-people-fill" ></i>Administrativo</a>
-                        <a class="nav-link" href="#"><i class="bi-bank2" ></i>Financeiro</a>
-                        <a class="nav-link" href="#"><i class="bi-briefcase-fill" ></i>Negócios</a>
-                        <a class="nav-link" href="#"><i class="bi-people-fill" ></i>RH</a>
-                        <a class="nav-link" href="#"><i class="bi-film" ></i>Marketing</a>
-                        <a class="nav-link" href="#"><i class="bi-cpu-fill" ></i>Tecnologia</a>
-                        
+
+
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="overflow-x: auto;">
+                    <div class="navbar-nav" >
+
+                        <a class="nav-link Ativo" role="button" ><i class="bi-house-fill"></i>Inicio</a>
+                        <a class="nav-link flex-nowrap"  data-bs-toggle="offcanvas" href="#MenuAdministracao" role="button" aria-controls="MenuAdministracao">
+                            <i class="bi-people-fill"></i>Administrativo
+                        </a>
+                        <a class="nav-link" data-bs-toggle="offcanvas" href="#MenuFinanceiro" role="button" aria-controls="MenuFinanceiro">
+                            <i class="bi-bank2"></i>Financeiro
+                        </a>
+                        <a class="nav-link" data-bs-toggle="offcanvas" href="#MenuNegocios" role="button" aria-controls="MenuNegocios"><i class="bi-briefcase-fill"></i>Negócios</a>
+                        <a class="nav-link" data-bs-toggle="offcanvas" href="#MenuRH" role="button" aria-controls="MenuRH"><i class="bi-people-fill"></i>RH</a>
+                        <a class="nav-link" data-bs-toggle="offcanvas" href="#MenuMarketing" role="button" aria-controls="MenuMarketing"><i class="bi-film"></i>Marketing</a>
+                        <a class="nav-link" data-bs-toggle="offcanvas" href="#MenuTecnologia" role="button" aria-controls="MenuTecnologia"><i class="bi-cpu-fill"></i>Tecnologia</a>
                     </div>
                 </div>
             </div>
         </nav>
-        <div class="page-container">
-            <aside class="d-none d-lg-block">
-                <asp:ContentPlaceHolder runat="server" ID="BarraLateral">
-                </asp:ContentPlaceHolder>
-            </aside>
-            <main>
+        <uc1:WUCMenuAdministracao runat="server" ID="WUCMenuAdministracao" />
+
+
+        <div class="page-container container-sm w-100">
+            <main class="">
                 <asp:ContentPlaceHolder runat="server" ID="MainContent">
                 </asp:ContentPlaceHolder>
             </main>

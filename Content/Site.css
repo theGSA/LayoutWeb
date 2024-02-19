@@ -34,8 +34,6 @@ textarea {
     padding: 0;
 }
 
-:root {
-}
 
 nav {
     background-color: var(--primary-color);
@@ -56,20 +54,21 @@ nav {
 .nav-link {
     text-shadow: 1px 1px 2px gray;
     border-radius: .5rem;
-    width: 100%;
-    padding: 2px 10px;
+    padding: 2px 5px;
+    display: inline-flex;
+    font: .5rem;
 }
 
 
-    .nav-link:hover {
-        /*box-shadow: 1px 1px 5px rgb(128, 128, 128, 1);*/
-        background-color: var(--selection-color);
-        color: var(--text-hover-color) !important;
+.nav-link:hover {
+    /*box-shadow: 1px 1px 5px rgb(128, 128, 128, 1);*/
+    background-color: var(--selection-color);
+    color: var(--text-hover-color) !important;
 
-    }
+}
 
 .nav-link > i {
-    margin:0px 10px 0px 0px;
+    margin:0px 5px 0px 0px;
 }
 
 main {
@@ -81,16 +80,16 @@ main {
 }
 
 .page-container {
-    background-color: blueviolet;
+    /*background-color: blueviolet;*/
     height: 100%;
     display: flex;
     overflow: hidden;
 }
 
 aside {
-    padding: .5rem;
-    width: max-content;
-    background-color: var(--primary-color);
+        /*padding: .5rem;
+        width: max-content;*/
+        background-color: var(--primary-color);
 }
 
 ul {
@@ -101,18 +100,18 @@ ul {
 
 #app {
     display: flex;
-    background-color: brown;
+    /*background-color: brown;*/
     flex-flow: column;
     height: 100vh;
     overflow: hidden;
 }
 
-.offcanvas-lg{
+.offcanvas{
     background-color:var(--primary-color);
 }
 
 .box-shadow {
-    box-shadow: 0px 0px 3px rgb(128, 128, 128, 1);
+    box-shadow: 0px 0px 3px rgb(0, 0, 0, 1);
 }
 
 .offcanvas-header {
@@ -123,4 +122,15 @@ ul {
 
 #navbarNavAltMarkup  navbar-nav  a{
     width: 500px !important;
+}
+
+#offcanvasResponsive {
+    background-color: var(--primary-color) !important;
+}
+
+.Ativoa {
+/*    background-color: white;*/
+    border-radius: 1rem;
+    border: 1px solid black;
+    color: black !important;
 }

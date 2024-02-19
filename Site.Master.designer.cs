@@ -24,13 +24,13 @@ namespace WebLayout
         protected global::System.Web.UI.HtmlControls.HtmlForm app;
 
         /// <summary>
-        /// Controle BarraLateral.
+        /// Controle WUCMenuAdministracao.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder BarraLateral;
+        protected global::WebLayout.WUCMenuAdministracao WUCMenuAdministracao;
 
         /// <summary>
         /// Controle MainContent.

@@ -1,45 +1,8 @@
 ﻿<%@ Page Title="Home" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebLayout._Default" %>
 
 
-<asp:Content runat="server" ContentPlaceHolderID="BarraLateral">
-<button class="btn btn-primary d-lg-none" style="color: black; background-color: skyblue; border-color: var(--primary-color); position: absolute; padding: 0px; margin: 0px;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive"><i class="bi bi-arrow-right" ></i></button>
-
-<div class="offcanvas-lg offcanvas-start" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasResponsiveLabel">Opções</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
-
-  </div>
-  <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-                <a href="#" class="nav-link">Solicitação Material/Compra/Serviço</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Produtos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Cotação de Produtos/Serviços</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Fornecedores</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Pagamento de Fornecedores</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Inventário patrimonial</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Solicitação de Serviço</a>
-            </li>
-        </ul>
-   </div>
-</div>
-</asp:Content>
-
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
+    
     <h1>Et corporis commodi et explicabo eius ut quia reiciendis. </h1>
     <p>
         Lorem ipsum dolor sit amet. Est rerum reprehenderit
